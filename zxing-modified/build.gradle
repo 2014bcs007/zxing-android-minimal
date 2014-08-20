@@ -8,6 +8,7 @@ buildscript {
 }
 
 apply plugin: 'android-library'
+apply plugin: 'maven'
 
 repositories {
   mavenCentral()
@@ -41,5 +42,12 @@ android {
     defaultConfig {
         minSdkVersion 7
         targetSdkVersion 19
+    }
+}
+
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: "file:mvn-clone/maven-repository/")
+        pom.artifactId = 'zxing-modified'
     }
 }
