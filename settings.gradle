@@ -1,6 +1,2 @@
-include ':zxing-android'
-include ':zxing-android-complete'
-include ':zxing-android-legacy'
+include ':zxing-modified', ':sample', ':library'
 include ':integration'
-include ':sample'
-include ':sample-nosupport'
